@@ -6,7 +6,13 @@ const Bookshelf = () => {
         { title: 'Fourth Wing', author: 'Rebecca Yarros' },
         { title: 'The Lion, the Witch and the Wardrobe', author: 'C.S. Lewis' },
       ]);
-      
+      const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setBooks((prevNewBook) => ({
+          ...prevBooks,
+          [name]: value,
+        }));
+      }
 return (
 <div className="bookshelfDiv">
   <div className="formDiv">
