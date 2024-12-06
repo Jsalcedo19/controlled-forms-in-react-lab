@@ -2,8 +2,11 @@ import { useState } from 'react';
 
 // Create a new component called Bookshelf.jsx and import useState at the top of the file:
 const Bookshelf = () => {
-const [books, setBooks] = useState([]);
-
+    const [books, setBooks] = useState([
+        { title: 'Fourth Wing', author: 'Rebecca Yarros' },
+        { title: 'The Lion, the Witch and the Wardrobe', author: 'C.S. Lewis' },
+      ]);
+      
 return (
 <div className="bookshelfDiv">
   <div className="formDiv">
