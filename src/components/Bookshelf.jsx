@@ -9,6 +9,9 @@ const Bookshelf = () => {
 
       const [newBook, setNewBooks] = useState({ title: '', author: '' });
 
+
+
+
       const handleInputChange = (event) => {
         const { name, value } = event.target;
         setNewBooks((newBook) => ({
@@ -27,7 +30,25 @@ return (
 <div className="bookshelfDiv">
   <div className="formDiv">
     <h3>Add a Book</h3>
-    {/* Form will go here */}
+    <form onSubmit={handleSubmit}>
+      
+        Title:
+        <input
+          type="text"
+          name="title"
+          value={newBook.title}
+          onChange={handleInputChange}
+        />
+
+        Author:
+        <input
+          type="text"
+          name="title"
+          value={newBook.author}
+          onChange={handleInputChange}
+        />
+    <button type="submit">Add Book</button>
+    </form>
   </div>
   <div className="bookCardsDiv">{/* Book cards will display here */}</div>
 </div>
